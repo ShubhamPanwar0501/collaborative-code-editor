@@ -24,18 +24,19 @@ jobs:
         with:
           python-version: 3.8
 
-      # Install dependencies
+      # Install dependencies (including pytest)
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          pip install pytest  # Ensure pytest is installed
 
       # Run tests with pytest
       - name: Run tests
         run: |
           pytest > result.log; tail -n 10 result.log
 
-  # Job 2: Docker Build and Push (optional, if you want to build Docker image)
+  # Job 2: Docker Build (without pushing)
   docker:
     needs: test   # This job depends on the test job
     runs-on: ubuntu-latest
@@ -49,7 +50,7 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
 
-      # Build the Docker image
+      # Build the Docker image (but do not push it)
       - name: Build Docker image
         run: |
           docker build -t my-fastapi-app .
