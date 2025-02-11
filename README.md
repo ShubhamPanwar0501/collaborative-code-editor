@@ -1,6 +1,3 @@
-Certainly! Here's a `README.md` created based on the requirements outlined in your case study:
-
-```markdown
 # Real-Time Collaborative Code Editor with AI-Assisted Debugging
 
 ## Project Overview
@@ -59,8 +56,8 @@ This project is built using **FastAPI**, **WebSocket**, **SQLAlchemy**, and incl
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/real-time-code-editor.git
-cd real-time-code-editor
+git clone https://github.com/ShubhamPanwar0501/collaborative-code-editor.git
+cd collaborative-code-editor
 ```
 
 ### 2. Set up a Python Virtual Environment
@@ -190,43 +187,3 @@ To run tests for a specific file, use:
 ```bash
 pytest test_main.py
 ```
-
----
-
-## Contributing
-
-1. Fork the repository.
-2. Clone your fork to your local machine.
-3. Create a new branch (`git checkout -b feature-branch`).
-4. Make your changes.
-5. Commit your changes (`git commit -am 'Add new feature'`).
-6. Push to your fork (`git push origin feature-branch`).
-7. Submit a pull request.
-
----
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
----
-
-## Conclusion
-
-The **Real-Time Collaborative Code Editor with AI-Assisted Debugging** aims to revolutionize how developers collaborate remotely by providing an interactive environment with live code editing and AI debugging assistance. It is designed to be scalable, secure, and easy to use, making it ideal for development teams working on projects together.
-
-Feel free to explore and contribute to this project!
-```
-
-### Sections in the `README.md`:
-1. **Project Overview**: Brief description of the project and its purpose.
-2. **Core Features**: Detailed breakdown of the functionalities like real-time collaboration, AI debugging, user management, etc.
-3. **Technologies Used**: Tech stack and libraries used to build the application.
-4. **Installation**: Instructions to set up and run the project locally.
-5. **Docker Setup**: Instructions to run the app using Docker.
-6. **API Endpoints**: Detailed explanation of the key API endpoints.
-7. **Testing**: Guide on running the tests using `pytest`.
-8. **Contributing**: Steps for contributing to the project.
-9. **License**: Information about the project's license.
-
-This `README.md` follows the case study instructions and provides a complete guide to setting up, running, and testing the application.
