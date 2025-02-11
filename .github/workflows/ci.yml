@@ -3,10 +3,10 @@ name: FastAPI CI Workflow
 on:
   push:
     branches:
-      - main
+      - '*'  # Triggers on any commit to any branch
   pull_request:
     branches:
-      - main
+      - '*'  # Triggers on any pull request to any branch
 
 jobs:
   # Job 1: Test Job
@@ -49,20 +49,7 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
 
-      # Log in to Docker Hub (if pushing to Docker Hub)
-      - name: Log in to Docker Hub
-        uses: docker/login-action@v2
-        with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
-
       # Build the Docker image
       - name: Build Docker image
         run: |
           docker build -t my-fastapi-app .
-      
-      # Push Docker image to Docker Hub (optional)
-      - name: Push Docker image to Docker Hub
-        run: |
-          docker push my-fastapi-app
-
